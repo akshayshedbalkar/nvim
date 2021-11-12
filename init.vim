@@ -14,14 +14,16 @@ Plug 'PProvost/vim-ps1'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/mkitt/tabline.vim'
-""Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc'
 Plug 'https://github.com/junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "NVIM SETTINGS
 colo holokai
+hi Function         ctermfg=1
 let mapleader=" "
 let &makeprg='(cd ./$* && make)'
 set nu
@@ -59,6 +61,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:DoxygenToolkit_authorName="Akshay Shedbalkar"
 let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
 let g:termdebug_wide = 1
+let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
+let g:fzf_layout = { 'down': '~40%' }
 let g:lsc_server_commands = {
     \ 'cpp': {
         \ 'command': 'clangd --background-index',
@@ -70,8 +74,14 @@ let g:lsc_server_commands = {
     \},
     \ 'python': 'pyls',
 \}
-let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
-let g:fzf_layout = { 'down': '~40%' }
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
 
 "PROJECT SETTINGS
 nnoremap <Leader>s :grep -r --exclude-dir={cmake-build-debug,build,config,.git,tasking_build,delivery_build,tools,doc,cmocka,test,scripts,.vscode} --exclude={tags,*.swp,*.sqlite,*.obj,*.a,*.html,*.exe,*.rdump} <cword> .<CR>
