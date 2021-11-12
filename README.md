@@ -3,7 +3,13 @@ Configuration for neovim
 
 Quick setup:
 
-cd ~/.config
-git clone https://github.com/akshayshedbalkar/nvim
+1) Clone the repository
+```
+git clone --recurse-submodules https://github.com/akshayshedbalkar/nvim ~/.config/nvim
+```
 
-Use vim-plug to install plugins
+2) Install plugins from nvim instance
+```
+nvim
+:PlugInstall
+```
