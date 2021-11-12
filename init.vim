@@ -10,7 +10,6 @@ Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'vim-scripts/vis'
 Plug 'vim-scripts/VisIncr'
 Plug 'https://github.com/vim-scripts/DoxygenToolkit.vim'
-Plug 'PProvost/vim-ps1'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'https://github.com/mkitt/tabline.vim'
