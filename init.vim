@@ -5,24 +5,24 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround' 
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
-Plug 'honza/vim-snippets'
 Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'vim-scripts/vis'
 Plug 'vim-scripts/VisIncr'
-Plug 'https://github.com/vim-scripts/DoxygenToolkit.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
-Plug 'https://github.com/mkitt/tabline.vim'
-Plug 'natebosch/vim-lsc'
-Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'mkitt/tabline.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'natebosch/vim-lsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 "NVIM SETTINGS
 colo holokai
-hi Function         ctermfg=1
+hi Function ctermfg=1
 let mapleader=" "
 let &makeprg='(cd ./$* && make)'
 set nu
@@ -60,8 +60,8 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:DoxygenToolkit_authorName="Akshay Shedbalkar"
 let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
 let g:termdebug_wide = 1
-let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
 let g:fzf_layout = { 'down': '~40%' }
+let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
 let g:lsc_server_commands = {
     \ 'cpp': {
         \ 'command': 'clangd --background-index',
