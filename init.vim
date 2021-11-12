@@ -43,6 +43,8 @@ nnoremap <Leader>n :noh<CR>
 nnoremap <Leader>x :%!xxd<CR>
 nnoremap <Leader>2 :diffget //2<CR> :diffupdate<CR>
 nnoremap <Leader>3 :diffget //3<CR> :diffupdate<CR>
+nnoremap gj <C-]>
+nnoremap gk <C-t>
 noremap <F12> :%!clang-format -style="{BasedOnStyle: microsoft, ColumnLimit: 150, ReflowComments: true}"<CR>
 inoremap <C-l> <C-o>a
 tnoremap <Esc> <C-\><C-n>
