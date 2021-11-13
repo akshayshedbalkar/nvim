@@ -18,6 +18,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'natebosch/vim-lsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'kassio/neoterm'
 call plug#end()
 
 "NVIM SETTINGS
@@ -57,12 +58,16 @@ nnoremap <Leader>p :Ag<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-b> :GBranches<CR>
+nnoremap <Leader>z :Ttoggle<CR>
 let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:DoxygenToolkit_authorName="Akshay Shedbalkar"
 let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
 let g:termdebug_wide = 1
 let g:fzf_layout = { 'down': '~40%' }
+let g:neoterm_default_mod = 'botright'
+let g:neoterm_autoinsert = 1
+let g:neoterm_size = 15
 let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
 let g:lsc_server_commands = {
     \ 'cpp': {
