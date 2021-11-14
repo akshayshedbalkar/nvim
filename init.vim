@@ -19,11 +19,14 @@ Plug 'honza/vim-snippets'
 Plug 'natebosch/vim-lsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kassio/neoterm'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 "NVIM SETTINGS
-colo holokai
-hi Function ctermfg=1
+" colo holokai
+" hi Function ctermfg=208
+colo onedark
+hi Normal ctermbg=none
 let mapleader=" "
 let &makeprg='(cd ./$* && make)'
 set nu
@@ -35,6 +38,8 @@ set noshowmode
 set diffopt+=vertical
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
+nmap gd <C-]>
+nmap gb <C-t>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -44,8 +49,6 @@ nnoremap <Leader>n :noh<CR>
 nnoremap <Leader>x :%!xxd<CR>
 nnoremap <Leader>2 :diffget //2<CR> :diffupdate<CR>
 nnoremap <Leader>3 :diffget //3<CR> :diffupdate<CR>
-nnoremap gj <C-]>
-nnoremap gk <C-t>
 noremap <F12> :%!clang-format -style="{BasedOnStyle: microsoft, ColumnLimit: 150, ReflowComments: true}"<CR>
 inoremap <C-l> <C-o>a
 tnoremap <Esc> <C-\><C-n>
@@ -68,7 +71,7 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoinsert = 1
 let g:neoterm_size = 15
-let g:lsc_auto_map = {'defaults': v:true, 'GoToDefinition': 'gd', 'PreviousReference': ''}
+let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
 let g:lsc_server_commands = {
     \ 'cpp': {
         \ 'command': 'clangd --background-index',
