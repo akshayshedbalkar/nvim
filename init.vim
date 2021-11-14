@@ -23,10 +23,9 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 "NVIM SETTINGS
-" colo holokai
-" hi Function ctermfg=208
+autocmd ColorScheme holokai hi Function ctermfg=208
+autocmd ColorScheme * hi Normal ctermbg=none
 colo onedark
-hi Normal ctermbg=none
 let mapleader=" "
 let &makeprg='(cd ./$* && make)'
 set nu
