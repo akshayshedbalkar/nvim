@@ -20,6 +20,7 @@ Plug 'natebosch/vim-lsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kassio/neoterm'
 Plug 'joshdick/onedark.vim'
+Plug 'akshayshedbalkar/atm.vim'
 call plug#end()
 
 "NVIM SETTINGS
