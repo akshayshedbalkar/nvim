@@ -82,7 +82,10 @@ let g:lsc_server_commands = {
         \ 'command': 'clangd --background-index',
         \ 'suppress_stderr': v:true
     \},
-    \ 'python': 'pyls',
+    \ 'python': {
+        \ 'command': 'pyls',
+        \ 'suppress_stderr': v:true
+    \}
 \}
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
