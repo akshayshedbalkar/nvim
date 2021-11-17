@@ -34,6 +34,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set nowrap
+set hidden
 set noshowmode
 set diffopt+=vertical
 set completeopt-=preview
