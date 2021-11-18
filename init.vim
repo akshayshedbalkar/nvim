@@ -26,16 +26,6 @@ call plug#end()
 "AUTO COMMANDS
 autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
-function NetrwMappings()
-	nnoremap <buffer> <C-h> :wincmd h<cr>
-	nnoremap <buffer> <C-j> :wincmd j<cr>
-	nnoremap <buffer> <C-k> :wincmd k<cr>
-	nnoremap <buffer> <C-l> :wincmd l<cr>
-endfunction
-augroup netrw_mappings
-  autocmd!
-  autocmd filetype netrw call NetrwMappings()
-augroup END
 
 "NVIM SETTINGS
 colo onedark
@@ -67,7 +57,7 @@ inoremap <C-l> <C-o>a
 tnoremap <Esc> <C-\><C-n>
 
 "PLUGIN SETTINGS
-nnoremap <F8> :Lex<CR>
+nnoremap <F8> :NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeFind<CR>
 noremap <Leader>t :Tabularize /
 nnoremap <Leader>p :Ag<CR>
@@ -79,10 +69,6 @@ let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:DoxygenToolkit_authorName="Akshay Shedbalkar"
 let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
-let g:netrw_list_hide= '^RP_SRC*,^Review,^doc,^test,build/$,^tags,compile_commands.json'
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-let g:netrw_liststyle = 3
 let g:termdebug_wide = 1
 let g:fzf_layout = { 'down': '~40%' }
 let g:neoterm_default_mod = 'botright'
