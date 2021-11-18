@@ -5,7 +5,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround' 
 Plug 'Raimondi/delimitMate'
 Plug 'godlygeek/tabular'
-Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'vim-scripts/vis'
 Plug 'vim-scripts/VisIncr'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -19,8 +18,9 @@ Plug 'honza/vim-snippets'
 Plug 'natebosch/vim-lsc'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kassio/neoterm'
-Plug 'joshdick/onedark.vim'
 Plug 'akshayshedbalkar/atm.vim'
+Plug 'changyuheng/color-scheme-holokai-for-vim'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 "AUTO COMMANDS
