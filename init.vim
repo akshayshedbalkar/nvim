@@ -64,10 +64,10 @@ nnoremap <C-p> :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-b> :GBranches<CR>
 nnoremap <Leader>z :Ttoggle<CR>
+let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
 let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:DoxygenToolkit_authorName="Akshay Shedbalkar"
-let NERDTreeIgnore = ['^RP_SRC*','^Review','^doc','^test', 'build$', '^tags', 'compile_commands.json']
 let g:termdebug_wide = 1
 let g:fzf_layout = { 'down': '~40%' }
 let g:neoterm_default_mod = 'botright'
