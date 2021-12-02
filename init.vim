@@ -26,6 +26,8 @@ call plug#end()
 "AUTO COMMANDS
 autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
+autocmd FileType python setlocal equalprg=yapf
+autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=\"{BasedOnStyle:\ microsoft,\ ColumnLimit:\ 150,\ ReflowComments:\ true}\"
 
 "NVIM SETTINGS
 colo onedark
@@ -41,7 +43,6 @@ set diffopt+=vertical
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
 nmap gd <C-]>
-nmap gb <C-t>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -51,7 +52,6 @@ nnoremap <Leader>n :noh<CR>
 nnoremap <Leader>x :%!xxd<CR>
 nnoremap <Leader>2 :diffget //2<CR> :diffupdate<CR>
 nnoremap <Leader>3 :diffget //3<CR> :diffupdate<CR>
-noremap <F12> :%!clang-format -style="{BasedOnStyle: microsoft, ColumnLimit: 150, ReflowComments: true}"<CR>
 inoremap <C-l> <C-o>a
 tnoremap <Esc> <C-\><C-n>
 
