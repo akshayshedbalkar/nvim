@@ -27,12 +27,13 @@ call plug#end()
 autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
+autocmd FileType python setlocal makeprg=python\ %
 autocmd FileType c,cpp setlocal equalprg=clang-format\ -style=\"{BasedOnStyle:\ microsoft,\ ColumnLimit:\ 150,\ ReflowComments:\ true}\"
+autocmd FileType c,cpp,unix setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
 colo onedark
 let mapleader=" "
-let &makeprg='(cd ./$* && make)'
 set nu
 set tabstop=4
 set shiftwidth=4
