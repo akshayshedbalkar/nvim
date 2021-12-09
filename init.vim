@@ -87,6 +87,10 @@ let g:lsc_server_commands = {
     \ 'python': {
         \ 'command': 'pyls',
         \ 'suppress_stderr': v:true
+    \},
+    \ 'rust': {
+        \ 'command': 'rust-analyzer',
+        \ 'suppress_stderr': v:true
     \}
 \}
 lua <<EOF
