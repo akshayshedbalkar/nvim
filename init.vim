@@ -61,7 +61,7 @@ tnoremap <Esc> <C-\><C-n>
 nnoremap <F8> :NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeFind<CR>
 noremap <Leader>t :Tabularize /
-nnoremap <Leader>p :Ag<CR>
+nnoremap <Leader>p :Rg<CR>
 nnoremap <C-p> :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <C-b> :GBranches<CR>
