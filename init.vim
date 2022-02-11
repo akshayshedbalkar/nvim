@@ -86,7 +86,7 @@ let g:lsc_server_commands = {
         \ 'suppress_stderr': v:true
     \},
     \ 'python': {
-        \ 'command': 'pyls',
+        \ 'command': 'pylsp',
         \ 'suppress_stderr': v:true
     \},
     \ 'rust': {
