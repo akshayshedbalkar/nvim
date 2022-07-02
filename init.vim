@@ -1,3 +1,5 @@
+"
+
 "PLUGIN MANAGEMENT
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-fugitive'
@@ -21,6 +23,7 @@ Plug 'kassio/neoterm'
 Plug 'akshayshedbalkar/atm.vim'
 Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'PProvost/vim-ps1'
 call plug#end()
 
 "AUTO COMMANDS
@@ -32,7 +35,7 @@ autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
 colo onedark
-let mapleader=" "
+let mapleader = " "
 set nu
 set tabstop=4
 set shiftwidth=4
