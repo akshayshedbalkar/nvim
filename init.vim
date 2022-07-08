@@ -42,7 +42,7 @@ set shiftwidth=4
 set expandtab
 set nowrap
 set noshowmode
-set diffopt+=vertical
+set diffopt+=vertical,iwhite
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
 nmap gd <C-]>
