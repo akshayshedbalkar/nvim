@@ -45,6 +45,8 @@ set noshowmode
 set diffopt+=vertical,iwhite
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
+set fdm=indent
+set fdls=99
 nmap gd <C-]>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
