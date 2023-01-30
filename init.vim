@@ -31,9 +31,10 @@ autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
-autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
+" autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
+set makeprg=make\ -s\ -C\ build
 colo onedark
 let mapleader = " "
 set nu
