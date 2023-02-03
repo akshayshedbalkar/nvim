@@ -34,9 +34,9 @@ autocmd FileType python setlocal makeprg=python\ %
 " autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
-set makeprg=make\ -s\ -C\ build
-colo onedark
 let mapleader = " "
+colo onedark
+set makeprg=make\ -j8\ -s\ -C\ build
 set nu
 set tabstop=4
 set shiftwidth=4
