@@ -67,7 +67,8 @@ nnoremap <F9> :NERDTreeFind<CR>
 noremap <Leader>t :Tabularize /
 nnoremap <Leader>p :Rg<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <Leader>b :Windows<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
 let NERDTreeIgnore = ['^RP_SRC*', '^Review', '^doc', '^test', 'build$', '^tags', 'compile_commands.json']
