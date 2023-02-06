@@ -14,7 +14,6 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'mkitt/tabline.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'stsewd/fzf-checkout.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'natebosch/vim-lsc'
@@ -68,8 +67,7 @@ nnoremap <F9> :NERDTreeFind<CR>
 noremap <Leader>t :Tabularize /
 nnoremap <Leader>p :Rg<CR>
 nnoremap <C-p> :Files<CR>
-nnoremap <Leader>b :Buffers<CR>
-nnoremap <C-b> :GBranches<CR>
+nnoremap <Leader>b :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
 let NERDTreeIgnore = ['^RP_SRC*', '^Review', '^doc', '^test', 'build$', '^tags', 'compile_commands.json']
