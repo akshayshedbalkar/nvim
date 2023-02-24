@@ -47,6 +47,7 @@ set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
 set fdm=indent
 set fdls=99
+set clipboard+=unnamedplus
 set mouse=
 nmap gd <C-]>
 nnoremap <C-h> <C-w>h
