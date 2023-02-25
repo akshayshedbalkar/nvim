@@ -73,7 +73,6 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
-let g:AutoPairsFlyMode = 1
 let NERDTreeIgnore = ['^RP_SRC*', '^Review', '^doc', '^test', 'build$', '^tags', 'compile_commands.json']
 let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
