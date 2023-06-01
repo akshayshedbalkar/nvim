@@ -73,9 +73,9 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
-let NERDTreeIgnore = ['^RP_SRC*', '^Review', '^doc', '^test', 'build$', '^tags', 'compile_commands.json']
 let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_section_z = '%l/%L : %c'
 let g:DoxygenToolkit_authorName = "Akshay Shedbalkar"
 let g:termdebug_wide = 1
 let g:fzf_layout = { 'down': '~40%' }
