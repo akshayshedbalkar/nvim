@@ -35,7 +35,7 @@ autocmd FileType python setlocal makeprg=python\ %
 "NVIM SETTINGS
 let mapleader = " "
 colo onedark
-set makeprg=make\ -j8\ -s\ -C\ build
+set makeprg=make\ -s\ -C\ build
 set nu
 set tabstop=4
 set shiftwidth=4
