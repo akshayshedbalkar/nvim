@@ -10,14 +10,14 @@ Plug 'godlygeek/tabular'
 Plug 'vim-scripts/vis'
 Plug 'vim-scripts/VisIncr'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on' : 'NERDTreeToggle' }
 Plug 'vim-airline/vim-airline'
 Plug 'mkitt/tabline.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'natebosch/vim-lsc'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do' : 'TSUpdate'}
 Plug 'kassio/neoterm'
 Plug 'akshayshedbalkar/atm.vim'
 Plug 'changyuheng/color-scheme-holokai-for-vim'
