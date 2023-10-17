@@ -73,7 +73,6 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
-let delimitMate_expand_cr = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%l/%L : %c'
 let g:DoxygenToolkit_authorName = "Akshay Shedbalkar"
@@ -113,4 +112,4 @@ EOF
 "PROJECT SETTINGS
 nnoremap <Leader>s :grep -r --exclude-dir={cmake-build-debug,build,config,.git,tasking_build,delivery_build,tools,doc,cmocka,test,scripts,.vscode} --exclude={tags,*.swp,*.sqlite,*.obj,*.a,*.html,*.exe,*.rdump} <cword> .<CR>
 command -nargs=1 Search :grep -r --exclude-dir={cmake-build-debug,build,config,.git,tasking_build,delivery_build,tools,doc,cmocka,test,scripts,.vscode} --exclude={tags,*.swp,*.sqlite,*.obj,*.a,*.html,*.exe,*.rdump} <args> .
-command -nargs=+ Refactor :cfdo %s/<args>/g|update
+command -nargs=+ Refactor cfdo :%s/<args>/g|update
