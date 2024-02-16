@@ -38,14 +38,14 @@ colo onedark
 set makeprg=make\ -s\ -C\ build
 set nu
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set nowrap
 set noshowmode
 set diffopt+=vertical,iwhite
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
-set fdm=indent
+set fdm=indent "uses shiftwidth
 set fdls=99
 set clipboard+=unnamedplus
 set mouse=
@@ -57,6 +57,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader>c :%s///ng <CR> 
 nnoremap <Leader>n :noh<CR>
 nnoremap <Leader>x :%!xxd<CR>
+nnoremap <Leader>r :%!xxd -r<CR>
 nnoremap <Leader>2 :diffget //2<CR> :diffupdate<CR>
 nnoremap <Leader>3 :diffget //3<CR> :diffupdate<CR>
 nnoremap <Leader>d A  /*!<  */<ESC>hhi
