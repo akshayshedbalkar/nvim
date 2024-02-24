@@ -30,6 +30,8 @@ autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
+autocmd Filetype c,cpp,rust,python setlocal foldmethod=expr
+autocmd Filetype c,cpp,rust,python setlocal foldexpr=nvim_treesitter#foldexpr()
 " autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
@@ -45,7 +47,7 @@ set noshowmode
 set diffopt+=vertical,iwhite
 set completeopt-=preview
 set efm+=ctc\ %t%n:\ [\"%f\"\ %l\/%c]%m
-set fdm=indent "uses shiftwidth
+set fdm=syntax
 set fdls=99
 set clipboard+=unnamedplus
 set mouse=
@@ -84,28 +86,34 @@ let g:neoterm_autoinsert = 1
 let g:neoterm_size = 15
 let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
 let g:lsc_server_commands = {
-    \ 'cpp': {
-        \ 'command': 'clangd --background-index',
-        \ 'suppress_stderr': v:true
-    \},
-    \ 'c': {
-        \ 'command': 'clangd --background-index',
-        \ 'suppress_stderr': v:true
-    \},
-    \ 'python': {
-        \ 'command': 'pylsp',
-        \ 'suppress_stderr': v:true
-    \},
-    \ 'rust': {
-        \ 'command': 'rust-analyzer',
-        \ 'suppress_stderr': v:true
-    \}
+      \ 'cpp': {
+      \ 'command': 'clangd --background-index',
+      \ 'suppress_stderr': v:true
+      \},
+      \ 'c': {
+      \ 'command': 'clangd --background-index',
+      \ 'suppress_stderr': v:true
+      \},
+      \ 'python': {
+      \ 'command': 'pylsp',
+      \ 'suppress_stderr': v:true
+      \},
+      \ 'rust': {
+      \ 'command': 'rust-analyzer',
+      \ 'suppress_stderr': v:true
+      \}
 \}
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
+  },
+  incremental_selection = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
   },
 }
 EOF
