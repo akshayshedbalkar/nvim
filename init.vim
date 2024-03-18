@@ -30,8 +30,8 @@ autocmd ColorScheme holokai hi Function ctermfg=208
 autocmd ColorScheme * hi Normal ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
-autocmd Filetype c,cpp,rust,python setlocal foldmethod=expr
-autocmd Filetype c,cpp,rust,python setlocal foldexpr=nvim_treesitter#foldexpr()
+autocmd Filetype c,cpp,rust,python,xml setlocal foldmethod=expr
+autocmd Filetype c,cpp,rust,python,xml setlocal foldexpr=nvim_treesitter#foldexpr()
 " autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
