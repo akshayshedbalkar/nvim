@@ -23,6 +23,7 @@ Plug 'akshayshedbalkar/atm.vim'
 Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'PProvost/vim-ps1'
+Plug 'unblevable/quick-scope'
 call plug#end()
 
 "AUTO COMMANDS
@@ -76,6 +77,9 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :Git difftool -y <args>
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%l/%L : %c'
 let g:DoxygenToolkit_authorName = "Akshay Shedbalkar"
