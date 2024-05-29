@@ -27,10 +27,11 @@ Plug 'unblevable/quick-scope'
 call plug#end()
 
 "AUTO COMMANDS
-autocmd ColorScheme holokai hi Function ctermfg=208
-autocmd ColorScheme * hi Normal ctermbg=none
+autocmd ColorScheme holokai hi Function guifg=208 ctermfg=208
+autocmd ColorScheme * hi Normal guibg=none ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
+autocmd FileType markdown setlocal makeprg=mmdc\ -i\ %
 autocmd Filetype c,cpp,rust,python,xml setlocal foldmethod=expr
 autocmd Filetype c,cpp,rust,python,xml setlocal foldexpr=nvim_treesitter#foldexpr()
 " autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
@@ -76,9 +77,9 @@ nnoremap <C-p> :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>w :Windows<CR>
 nnoremap <Leader>z :Ttoggle<CR>
-command -nargs=1 Gdy :Git difftool -y <args>
-highlight QuickScopePrimary ctermfg=155 cterm=underline
-highlight QuickScopeSecondary ctermfg=81 cterm=underline
+command -nargs=1 Gdy :G difftool -y <args>
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%l/%L : %c'
