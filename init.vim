@@ -121,6 +121,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
 }
+vim.o.grepprg = 'grep'
 EOF
 
 "PROJECT SETTINGS
