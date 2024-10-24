@@ -10,7 +10,7 @@ Plug 'godlygeek/tabular'
 Plug 'vim-scripts/vis'
 Plug 'vim-scripts/VisIncr'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'preservim/nerdtree', { 'on' : 'NERDTreeToggle' }
+Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'mkitt/tabline.vim'
 Plug 'junegunn/fzf.vim'
@@ -24,6 +24,7 @@ Plug 'changyuheng/color-scheme-holokai-for-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'PProvost/vim-ps1'
 Plug 'unblevable/quick-scope'
+Plug 'aklt/plantuml-syntax'
 call plug#end()
 
 "AUTO COMMANDS
@@ -31,10 +32,10 @@ autocmd ColorScheme holokai hi Function guifg=208 ctermfg=208
 autocmd ColorScheme * hi Normal guibg=none ctermbg=none
 autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
+" autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 autocmd FileType markdown setlocal makeprg=mmdc\ -i\ %
 autocmd Filetype c,cpp,rust,python,xml setlocal foldmethod=expr
 autocmd Filetype c,cpp,rust,python,xml setlocal foldexpr=nvim_treesitter#foldexpr()
-" autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 
 "NVIM SETTINGS
 let mapleader = " "
@@ -42,7 +43,7 @@ colo onedark
 set makeprg=make\ -s\ -C\ build
 set nu
 set tabstop=4
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
 set nowrap
 set noshowmode
@@ -80,6 +81,7 @@ nnoremap <Leader>z :Ttoggle<CR>
 command -nargs=1 Gdy :G difftool -y <args>
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+let g:plantuml_executable_script = 'plantuml -tsvg'
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_section_z = '%l/%L : %c'
