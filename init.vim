@@ -34,6 +34,7 @@ autocmd FileType python setlocal equalprg=yapf
 autocmd FileType python setlocal makeprg=python\ %
 " autocmd FileType c,cpp setlocal makeprg=make\ -s\ -C\ $*
 autocmd FileType markdown setlocal makeprg=mmdc\ -i\ %
+autocmd FileType rst setlocal makeprg=make\ html
 autocmd Filetype c,cpp,rust,python,xml setlocal foldmethod=expr
 autocmd Filetype c,cpp,rust,python,xml setlocal foldexpr=nvim_treesitter#foldexpr()
 
